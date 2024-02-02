@@ -9,6 +9,18 @@ import reactifyWc from 'reactify-wc';
 import '@kyndryl-design-system/shidoka-charts/components/chart';
 
 const KdChart = reactifyWc('kd-chart');
+const KynUIShell = reactifyWc('kyn-ui-shell');
+const KynHeader = reactifyWc('kyn-header');
+const KynHeaderPanel = reactifyWc('kyn-header-panel');
+const KynHeaderPanelLink = reactifyWc('kyn-header-panel-link');
+const KynHeaderNav = reactifyWc('kyn-header-nav');
+const KynHeaderLink = reactifyWc('kyn-header-link');
+const KynHeaderFlyouts = reactifyWc('kyn-header-flyouts');
+const KynHeaderFlyout = reactifyWc('kyn-header-flyout');
+const KynHeaderAvatar = reactifyWc('kyn-header-avatar');
+const KynLocalNav = reactifyWc('kyn-local-nav');
+const KynLocalNavLink = reactifyWc('kyn-local-nav-link');
+const KynFooter = reactifyWc('kyn-footer');
 
 import SwitcherIcon from '@kyndryl-design-system/shidoka-foundation/assets/svg/switcher.svg?react';
 import { UserAvatar } from '@carbon/icons-react';
@@ -16,97 +28,97 @@ import { UserAvatar } from '@carbon/icons-react';
 function App() {
   return (
     <>
-      <kyn-ui-shell>
-        <kyn-header divider="" apptitle="Shidoka React">
-          <kyn-header-panel slot="left" heading="Panel Heading">
+      <KynUIShell>
+        <KynHeader divider="" apptitle="Shidoka React">
+          <KynHeaderPanel slot="left" heading="Panel Heading">
             <SwitcherIcon slot="button" />
 
-            <kyn-header-panel-link href="javascript:void(0)">
+            <KynHeaderPanelLink href="javascript:void(0)">
               <UserAvatar size={24} />
               Link 1
-            </kyn-header-panel-link>
-            <kyn-header-panel-link href="javascript:void(0)">
+            </KynHeaderPanelLink>
+            <KynHeaderPanelLink href="javascript:void(0)">
               <UserAvatar size={24} />
               Link 2
-            </kyn-header-panel-link>
-            <kyn-header-panel-link href="javascript:void(0)">
+            </KynHeaderPanelLink>
+            <KynHeaderPanelLink href="javascript:void(0)">
               <UserAvatar size={24} />
               Link 3
-            </kyn-header-panel-link>
-          </kyn-header-panel>
+            </KynHeaderPanelLink>
+          </KynHeaderPanel>
 
-          <kyn-header-nav>
-            <kyn-header-link href="javascript:void(0)"> Link 1 </kyn-header-link>
-            <kyn-header-link href="javascript:void(0)" isActive>
+          <KynHeaderNav>
+            <KynHeaderLink href="javascript:void(0)"> Link 1 </KynHeaderLink>
+            <KynHeaderLink href="javascript:void(0)" isActive>
               {' '}
               Link 2{' '}
-            </kyn-header-link>
-            <kyn-header-link href="javascript:void(0)">
+            </KynHeaderLink>
+            <KynHeaderLink href="javascript:void(0)">
               Link 3
-              <kyn-header-link slot="links" href="javascript:void(0)">
+              <KynHeaderLink slot="links" href="javascript:void(0)">
                 {' '}
                 Sub Link # 1{' '}
-              </kyn-header-link>
-              <kyn-header-link slot="links" href="javascript:void(0)">
+              </KynHeaderLink>
+              <KynHeaderLink slot="links" href="javascript:void(0)">
                 {' '}
                 Sub Link 2{' '}
-              </kyn-header-link>
-            </kyn-header-link>
-          </kyn-header-nav>
+              </KynHeaderLink>
+            </KynHeaderLink>
+          </KynHeaderNav>
 
-          <kyn-header-flyouts>
-            <kyn-header-flyout>
+          <KynHeaderFlyouts>
+            <KynHeaderFlyout>
               <span slot="button">Sign in</span>
 
               <div>
-                <kyn-header-link href="javascript:void(0)"> Login </kyn-header-link>
-                <kyn-header-link href="javascript:void(0)"> Sign up </kyn-header-link>
+                <KynHeaderLink href="javascript:void(0)"> Login </KynHeaderLink>
+                <KynHeaderLink href="javascript:void(0)"> Sign up </KynHeaderLink>
               </div>
-            </kyn-header-flyout>
+            </KynHeaderFlyout>
 
-            <kyn-header-flyout assistiveText="My Account" hideArrow>
-              <kyn-header-avatar initials="KB" slot="button" />
+            <KynHeaderFlyout assistiveText="My Account" hideArrow>
+              <KynHeaderAvatar initials="KB" slot="button" />
 
-              <kyn-header-link href="javascript:void(0)"> Logout </kyn-header-link>
-            </kyn-header-flyout>
-          </kyn-header-flyouts>
-        </kyn-header>
+              <KynHeaderLink href="javascript:void(0)"> Logout </KynHeaderLink>
+            </KynHeaderFlyout>
+          </KynHeaderFlyouts>
+        </KynHeader>
 
-        <kyn-local-nav>
-          <kyn-local-nav-link href="javascript:void(0)" active="">
+        <KynLocalNav>
+          <KynLocalNavLink href="javascript:void(0)" active="">
             <UserAvatar size={20} slot="icon" />
             Link 1
-          </kyn-local-nav-link>
+          </KynLocalNavLink>
 
-          <kyn-local-nav-link href="javascript:void(0)">
+          <KynLocalNavLink href="javascript:void(0)">
             <UserAvatar size={20} slot="icon" />
             Link 2
-            <kyn-local-nav-link slot="links" href="javascript:void(0)">
+            <KynLocalNavLink slot="links" href="javascript:void(0)">
               {' '}
               L2 Link 1{' '}
-            </kyn-local-nav-link>
-            <kyn-local-nav-link slot="links" href="javascript:void(0)">
+            </KynLocalNavLink>
+            <KynLocalNavLink slot="links" href="javascript:void(0)">
               {' '}
               L2 Link 2{' '}
-            </kyn-local-nav-link>
-          </kyn-local-nav-link>
+            </KynLocalNavLink>
+          </KynLocalNavLink>
 
-          <kyn-local-nav-link href="javascript:void(0)" expanded="">
+          <KynLocalNavLink href="javascript:void(0)" expanded="">
             <UserAvatar size={20} slot="icon" />
             Link 3
-            <kyn-local-nav-link slot="links" href="javascript:void(0)">
+            <KynLocalNavLink slot="links" href="javascript:void(0)">
               L2 Link 1
-              <kyn-local-nav-link slot="links" href="javascript:void(0)">
+              <KynLocalNavLink slot="links" href="javascript:void(0)">
                 {' '}
                 L3 Link 1{' '}
-              </kyn-local-nav-link>
-              <kyn-local-nav-link slot="links" href="javascript:void(0)">
+              </KynLocalNavLink>
+              <KynLocalNavLink slot="links" href="javascript:void(0)">
                 {' '}
                 L3 Link 2{' '}
-              </kyn-local-nav-link>
-            </kyn-local-nav-link>
-          </kyn-local-nav-link>
-        </kyn-local-nav>
+              </KynLocalNavLink>
+            </KynLocalNavLink>
+          </KynLocalNavLink>
+        </KynLocalNav>
 
         <main>
           <div className="kd-grid">
@@ -180,10 +192,10 @@ function App() {
           </div>
         </main>
 
-        <kyn-footer>
+        <KynFooter>
           <span slot="copyright"> Copyright &copy; 2023 Kyndryl Inc. All rights reserved. </span>
-        </kyn-footer>
-      </kyn-ui-shell>
+        </KynFooter>
+      </KynUIShell>
     </>
   );
 }

@@ -156,7 +156,7 @@ function App() {
         </main>
 
         <kyn-footer>
-          <span slot="copyright"> Copyright &copy; 2023 Kyndryl Inc. All rights reserved. </span>
+          <span slot="copyright"> Copyright &copy; 2025 Kyndryl Inc. All rights reserved. </span>
         </kyn-footer>
       </kyn-ui-shell>
     </>

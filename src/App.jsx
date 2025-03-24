@@ -4,12 +4,12 @@ import '@kyndryl-design-system/shidoka-applications/components/global/uiShell';
 import '@kyndryl-design-system/shidoka-applications/components/global/header';
 import '@kyndryl-design-system/shidoka-applications/components/global/localNav';
 import '@kyndryl-design-system/shidoka-applications/components/global/footer';
+import '@kyndryl-design-system/shidoka-applications/components/reusable/pageTitle';
 
 import '@kyndryl-design-system/shidoka-charts/components/chart';
 
-import UserAvatar16 from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/user.svg?react';
+import SampleIcon from '@kyndryl-design-system/shidoka-icons/svg/monochrome/16/circle-stroke.svg?react';
 import UserAvatar20 from '@kyndryl-design-system/shidoka-icons/svg/monochrome/20/user.svg?react';
-import UserAvatar24 from '@kyndryl-design-system/shidoka-icons/svg/monochrome/24/user.svg?react';
 
 function App() {
   return (
@@ -18,15 +18,15 @@ function App() {
         <kyn-header divider="" apptitle="Shidoka React">
           <kyn-header-nav>
             <kyn-header-link href="javascript:void(0)">
-              <UserAvatar24 />
+              <SampleIcon />
               Link 1
             </kyn-header-link>
             <kyn-header-link href="javascript:void(0)" isActive>
-              <UserAvatar24 />
+              <SampleIcon />
               Link 2
             </kyn-header-link>
             <kyn-header-link href="javascript:void(0)">
-              <UserAvatar24 />
+              <SampleIcon />
               Link 3
               <kyn-header-link slot="links" href="javascript:void(0)">
                 Sub Link 1
@@ -49,12 +49,12 @@ function App() {
 
         <kyn-local-nav>
           <kyn-local-nav-link href="javascript:void(0)" active="">
-            <UserAvatar16 slot="icon" />
+            <SampleIcon slot="icon" />
             Link 1
           </kyn-local-nav-link>
 
           <kyn-local-nav-link href="javascript:void(0)">
-            <UserAvatar16 slot="icon" />
+            <SampleIcon slot="icon" />
             Link 2
             <kyn-local-nav-link slot="links" href="javascript:void(0)">
               {' '}
@@ -67,7 +67,7 @@ function App() {
           </kyn-local-nav-link>
 
           <kyn-local-nav-link href="javascript:void(0)" expanded="">
-            <UserAvatar16 slot="icon" />
+            <SampleIcon slot="icon" />
             Link 3
             <kyn-local-nav-link slot="links" href="javascript:void(0)">
               L2 Link 1
@@ -86,7 +86,7 @@ function App() {
         <main>
           <div className="kd-grid">
             <div className="kd-grid__col--sm-4 kd-grid__col--md-8 kd-grid__col--lg-12">
-              <h1 className="kd-type--headline-03">Shidoka React Sample App</h1>
+              <kyn-page-title pagetitle="Shidoka React Sample App"></kyn-page-title>
             </div>
 
             <div className="kd-grid__col--sm-4 kd-grid__col--md-4 kd-grid__col--lg-8">
